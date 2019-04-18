@@ -1,0 +1,47 @@
+<!doctype html><!-- KEYbd1.html -->
+<html>
+<head><meta charset="utf-8"/>
+<meta name="viewport"content="width=device-width,initial-scale=1"/>
+<script>
+var hobby0 = new Array("-선택-","");
+var hobby1 = new Array("선택", "CK420","CK30","K661");
+var hobby2 = new Array("선택", "MKF30S","DT70","GK360");
+var hobby3 = new Array("선택", "Gtune GK787","K640","CK600");
+function hobbychange(item){
+    var temp, i=0, j=0;
+    var ccount, cselect;
+
+    temp = document.signform.hobby;
+
+    for (i=(temp.options.length-1) ; i>0 ; i--){ temp.options[i] = null; }
+    eval('ccount = hobby' + item + '.length');
+    for (j=0 ; j<ccount ; j++) {
+        eval('cselect = hobby' + item + '[' + j + '];');
+        temp.options[j]= new Option(cselect,cselect); 
+    }
+    temp.options[0].selected=true;
+    return true;
+}
+</script>
+
+<form name=signform>
+
+<table cellpadding=1>
+<tr>
+	<td>
+		<select name=bighobby onChange=javascript:hobbychange(document.signform.bighobby.options.selectedIndex);>
+			<option selected value="">-선택-</option>
+			<option value=청축>청축</option>
+			<option value=갈축>갈축</option>
+			<option value=적축>적축</option>
+		</select>
+	</td>
+	<td>
+		<select name=hobby size=1>
+			<option selected value="">-선택-</option>
+			<option value=""></option>
+		</select>
+	</td>
+</tr>
+</table>
+</form>
