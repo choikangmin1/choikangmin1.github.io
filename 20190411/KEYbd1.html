@@ -2,8 +2,11 @@
 <html>
 <head><meta charset="utf-8"/>
 <meta name="viewport"content="width=device-width,initial-scale=1"/>
+<h3>
+키보드 종류
+</h3>
 <script>
-var hobby0 = new Array("-선택-","");
+var hobby0 = new Array("-종류-","");
 var hobby1 = new Array("선택", "CK420","CK30","K661");
 var hobby2 = new Array("선택", "MKF30S","DT70","GK360");
 var hobby3 = new Array("선택", "Gtune GK787","K640","CK600");
@@ -30,7 +33,7 @@ function hobbychange(item){
 <tr>
 	<td>
 		<select name=bighobby onChange=javascript:hobbychange(document.signform.bighobby.options.selectedIndex);>
-			<option selected value="">-선택-</option>
+			<option selected value="">-키보드 종류-</option>
 			<option value=청축>청축</option>
 			<option value=갈축>갈축</option>
 			<option value=적축>적축</option>
@@ -38,7 +41,7 @@ function hobbychange(item){
 	</td>
 	<td>
 		<select name=hobby size=1>
-			<option selected value="">-선택-</option>
+			<option selected value="">-종류-</option>
 			<option value=""></option>
 		</select>
 	</td>
