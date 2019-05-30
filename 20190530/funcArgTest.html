@@ -21,9 +21,9 @@
         <h4>가변 인자 함수 실습</h4>
         <script>
             function sumy(){
-                var result=0;
-                for(var i=0;i<arguments.length;i++){
-                    result-result+argunments[i];
+                var result = 0;
+                for(var i = 0; i < arguments.length ; i++){
+                    result = result + arguments[i];
                 }
                 return result;
             }
@@ -31,7 +31,7 @@
                 for(var i in arguments)
                     document.write(arguments[i],"<br/>");
             }
-            var value=sumy(10,20,30);
+            var value = sumy(10,20,30);
             printValue(value);
             printValue("a",10,15,"v");
         </script>
