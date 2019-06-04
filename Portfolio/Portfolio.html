@@ -4,19 +4,11 @@
 <meta charset="utf-8"/>
 <meta name="viewport"content="width=device-width,initial-scale=1"/>
 <style>
-    *{
-        box-sizing: border-box;
-        padding:0;
-        margin:0;
-    }
-    .row::after{
-        content:"";
-        clear:both;
-        display: table;
-    }
+    *{box-sizing: border-box; padding:0; margin:0;}
+    .row::after{content:""; clear:both; display: table;}
     .col-1{width:8.33%;}
-    .col-2{width:12%;}
-    .col-3{width:16.66%;}
+    .col-2{width:16.66%;}
+    .col-3{width:12%;}
     .col-4{width:33.33%;}
     .col-5{width:41.66%;}
     .col-6{width:50%;}
@@ -26,77 +18,42 @@
     .col-10{width:83.33%;}
     .col-11{width:91.66%;}
     .col-12{width:100%;}
-    .header {
-        background-color: yellow;
-        color: black;
-        padding: 35px;
-    }
-    .footer{
-        background-color: yellow;
-        color: black;
-        padding: 10px;
-    }
-    .menu ul,.banner ul {
-        list-style-type: none;
-    }
-    .menu li{
-        background-color: lightblue;
-        color:black;
-        padding: 10px;
-        margin-bottom: 10px;
-        box-shadow: 0.1px 3px gray;
-    }
-    .menu li:hover{
-        background-color: orange;
-    }
-    .banner li{
-        border:2px solid black;
-        padding: 10px; 
-        margin-bottom: 10px;
-        box-shadow: 0.1px 3px gray;
-    }
-    .banner li img{
-        width: 30%;
-        vertical-align:middle;
-    }
-    .main{
-        position: relative;
-    }
-    .position1{
-        position: absolute;
-        left: 80%;
-        
-    }
-    .position2{
-        position: absolute;
-        right: 100%;
-    }
+    [class*="col-"]
+    {float: left; padding:10px;}
+    .header {background-image: "배경화면jpg";}
+    .menu ul,.banner ul {list-style-type: none;}
+    .menu li{background-color: yellow; color:black; padding: 10px; margin-bottom: 10px;
+    box-shadow: 0.1px 3px black;}
+    .menu li:hover{background-color: red;}
+    .banner   li{border:2px solid black; padding: 10px; margin-bottom: 10px;box-shadow: 0.1px 3px gray;}
+    .banner li img{width: 30%; vertical-align: middle;}
     @media only screen and{max-width:768px}
+    {[class*="col-"]}{width: 100;}
     </style>
-    <title>20181418 최강민 포트폴리오</title>
-    <body background-image:url('배경화면.jpg');>
-    <header class="header">
-        <div>
-            <h3>20181418 최강민 포트폴리오</h3>
-        </div>
+    <title>20181418 최강민 포트폴리오</title></head>
+    <body>
+        <header class="header">
+        <center>
+        <h2>20181418 최강민 포트폴리오</h2>
+            </center>
         </header>
-    </body>
-    <div class="row"></div>
+        <div class="row"></div>
         <div id="main">
-            <nav class="col-2 menu position1">
-                <ul>
-                    <li><div style="cursor: :pointer" on click=window.location.href="";>자격증</div></li>
-                    <li><div style="cursor: :pointer" on click=window.location.href="";>웹 프로젝트</div></li>
-                    <li><div style="cursor: :pointer" on click=window.location.href="";>전공 실습</div></li>
+            <nav class="col-3 menu">
+            <ul>
+                <li><div style="cursor: pointer" onclick=window.location.href='';>자격증</div></li>
+                <li><div style="cursor: pointer" onclick=window.location.href='';>자료구조 프로그램</div></li>
+                <li><div style="cursor: pointer" onclick=window.location.href='';>c++ 프로그램</div></li>
+                <li><div style="cursor: pointer" onclick=window.location.href='';>웹 프로그래밍</div></li>
                 </ul>
             </nav>
-            <section class="col-7 position2">
-                <div>
-                <h3>내가 아직 살아있는 동안에는 나로 하여금 헛되이 살지 않게 하라.</h3>
-                </div>
+            <section class="col-6">
+               <center>
+                <h3>최선을 다하지 않으면서 최고를 바라지 마라. </h3>
+                <img src="laptop.jpg" width="1000" height="600">
+                </center>
             </section>
         </div>
-    <div class="row"></div>
-    <footer class="footer"><h4>Copyright 2019 Korea.</h4></footer>
-    </head>
-</html>
+        <div class="row"></div>
+        <footer class="footer"><h4>Copyright 2019 Korea.</h4></footer>
+    </body></html>
